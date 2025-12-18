@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgb(34, 57, 57);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    
+    font-size: 30px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    
+    height: 3rem;
+}
+
+#error{
+    color: rgb(244, 119, 11);
+    font-size: 20px;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    height: 2rem;
+    margin-bottom: 0;
+    
+}
+
+#success{
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    height: 2rem;
+    margin-bottom: 0;
+    
+}
+
+form{
+width: 50%;
+height: 15rem;
+padding: 2rem;
+
+background-color: white;
+margin-top: 2rem;
+border-radius: 5px;
+display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label{
+    width: 100%;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+form input{
+    width: 100%;
+    height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 15rem;
+    height: 2rem;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
