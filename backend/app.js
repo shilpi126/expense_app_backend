@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const db = require("./utils/db.connection");
 const userRouter = require("./routes/userRoutes");
+const expenseRouter = require("./routes/expenseRoutes");
 const cors = require("cors");
 const path = require("path");
 
@@ -14,6 +15,7 @@ app.get("/", (req,res)=>{
 })
 
 app.use("/user", userRouter);
+app.use("/expense", expenseRouter);
 
 
 const startServer = async()=>{
