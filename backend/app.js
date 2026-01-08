@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+
 const db = require("./utils/db.connection");
 const userRouter = require("./routes/userRoutes");
 const expenseRouter = require("./routes/expenseRoutes");
@@ -10,12 +11,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname,'public')))
 
+require("./models");
+
 app.get("/", (req,res)=>{
     res.send("Hello world");
 })
 
 app.use("/user", userRouter);
 app.use("/expense", expenseRouter);
+
+
 
 
 const startServer = async()=>{

@@ -1,11 +1,19 @@
+
+const { where } = require("sequelize");
 const Expense = require("../models/expenseModel")
 
 
 
 const createExpense = async(req,res)=>{
     const {amount,description, category}= req.body;
+
+    const UserId = req.user.id;
+    console.log("+++++++>>>>)))",UserId)
+
+
     try{
-        const expense = await Expense.create({amount,description,category});
+        const expense = await Expense.create({amount,description,category,UserId});
+        console.log(expense);
         res.status(201).json({
             data:expense,
             message:"expense created successfully!"
@@ -21,10 +29,13 @@ const createExpense = async(req,res)=>{
 
 
 
+
 const getExpense = async(req,res)=>{
+    const UserId = req.user.id;
     
     try{
-        const expense = await Expense.findAll();
+        const expense = await Expense.findAll({where:{UserId}});
+        console.log("user_expense",expense);
         res.status(201).json({
             data:expense,
             message:"expense created successfully!"
