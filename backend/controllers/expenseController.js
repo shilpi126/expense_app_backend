@@ -8,12 +8,12 @@ const createExpense = async(req,res)=>{
     const {amount,description, category}= req.body;
 
     const UserId = req.user.id;
-    console.log("+++++++>>>>)))",UserId)
+    //console.log("+++++++>>>>)))",UserId)
 
 
     try{
         const expense = await Expense.create({amount,description,category,UserId});
-        console.log(expense);
+        //console.log(expense);
         res.status(201).json({
             data:expense,
             message:"expense created successfully!"
@@ -38,12 +38,12 @@ const getExpense = async(req,res)=>{
         console.log("user_expense",expense);
         res.status(201).json({
             data:expense,
-            message:"expense created successfully!"
+            message:"get all expenses successfully!"
         });
         
     }catch(err){
         console.log(err);
-        res.status(500).json({message:"Something went wrong!"});
+        res.status(500).json({message:"Something went wrong, while fetching expenses!"});
 
 
     }

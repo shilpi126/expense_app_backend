@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.post("/add",authenticate,createExpense);
 router.get("/get_expense",authenticate,getExpense);
-router.put("/update/:id",updateExpense);
-router.delete("/delete/:id",deleteExpense);
+router.put("/update/:id",authenticate,updateExpense);
+router.delete("/delete/:id",authenticate,deleteExpense);
 
 
 

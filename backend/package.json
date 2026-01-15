@@ -12,11 +12,13 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cashfree-pg": "^5.1.0",
     "cors": "^2.8.5",
     "express": "^5.2.1",
     "jsonwebtoken": "^7.4.1",
     "mysql2": "^3.16.0",
     "nodemon": "^3.1.11",
-    "sequelize": "^6.37.7"
+    "sequelize": "^6.37.7",
+    "uuid": "^9.0.1"
   }
 }
